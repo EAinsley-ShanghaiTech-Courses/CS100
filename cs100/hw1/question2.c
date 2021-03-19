@@ -5,7 +5,7 @@ const double Eps = 1e-6;
 
 int main() {
   double mood = 100;
-  int hour1 = 8, hour2 = 0, hour3 = 0, min1 = 0, min2 = 0, min3, num = 0,
+  int hour1 = 8, hour2 = 0, hour3 = 0, min1 = 0, min2 = 0, min3 = 0, num = 0,
       timerest = 0;
   printf("How many lectures today?\n");
   scanf("%d", &num);
