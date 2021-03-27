@@ -76,7 +76,7 @@ void CodeExe(int lines, const struct CodeLine *codes) {
   int regesters[kRegNumber];
   memset(regesters, 0, sizeof(regesters));
   while (currentline < lines) {
-    const struct CodeLine *codeunit = &codes[currentline];
+    const struct CodeLine *codeunit = &codes[currentline++];
     switch (codeunit->operation) {
     case LET:
       regesters[codeunit->value[0]] = codeunit->value[1];
@@ -99,9 +99,7 @@ void CodeExe(int lines, const struct CodeLine *codes) {
       break;
     case BGE:
       if (regesters[codeunit->value[0]] >= regesters[codeunit->value[1]]) {
-        currentline =
-            codeunit->value[2] - 2; /* code line starts at 1, but the index of
-                                       the array starts at 0 */
+        currentline = codeunit->value[2] - 1;
       }
       break;
     case PRINT:
@@ -109,7 +107,6 @@ void CodeExe(int lines, const struct CodeLine *codes) {
              regesters[codeunit->value[0]]);
       break;
     }
-    currentline++;
   }
 }
 
