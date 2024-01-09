@@ -74,7 +74,8 @@ int main() {
     puts("Try again? ('y' to restart)");
     EndGame(game);
     again = getchar();
-    getchar();
+    while (getchar() != '\n')
+      continue;
   } while (again == 'y');
   puts("Goodbye!");
   return 0;

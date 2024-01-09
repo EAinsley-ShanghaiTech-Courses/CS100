@@ -1,4 +1,4 @@
-\build
+/build
 .vscode
 test.c
 *.in
@@ -6,3 +6,8 @@ test.c
 input.txt
 *.out
 .DS_store
+/test
+makefile
+*.txt
+CMakeFiles
+*.cmake
