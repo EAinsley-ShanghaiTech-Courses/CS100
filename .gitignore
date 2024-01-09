@@ -1,0 +1,13 @@
+/build
+.vscode
+test.c
+*.in
+/input
+input.txt
+*.out
+.DS_store
+/test
+makefile
+*.txt
+CMakeFiles
+*.cmake
